@@ -1,0 +1,318 @@
+% commande d'exécution simple :
+% pandoc RAPPORT.md --template=template_FR.tex -o RAPPORT.pdf --pdf-engine=xelatex --bibliography=references.bib --csl=ieee.csl --citeproc --toc --toc-depth=2
+\documentclass[11pt]{article}
+\tracinglostchars=2
+
+\usepackage[no-math]{fontspec}
+\usepackage[french]{babel}  
+\usepackage{xeCJK}
+
+\defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\setmainfont{Libertinus Serif}[
+  BoldFont=Libertinus Serif Bold,
+  ItalicFont=Libertinus Serif Italic,
+  BoldItalicFont=Libertinus Serif Bold Italic
+]
+\setsansfont{Libertinus Sans}[
+  BoldFont=Libertinus Sans Bold
+]
+\setmonofont{JuliaMono}[
+  BoldFont=JuliaMono Bold,
+  Scale=0.9
+]
+\setCJKmainfont{Noto Serif CJK SC}[
+  BoldFont=Noto Serif CJK SC Bold
+]
+
+\frenchbsetup{StandardLists=true}
+
+% ==================== MATHÉMATIQUES ====================
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{unicode-math}
+\setmathfont{Libertinus Math}
+\setmathfont{Libertinus Math}[range={cal,bfcal}, Scale=MatchLowercase]
+\usepackage{dsfont}
+
+\setcounter{secnumdepth}{0}
+
+% ==================== COMMANDES PERSONNALISÉES ====================
+\usepackage{pifont}
+\newcommand{\bra}[1]{\langle #1|}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\braket}[2]{\langle #1|#2\rangle}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+
+% Symboles de validation
+\providecommand{\cmark}{\ding{51}}
+\providecommand{\xmark}{\ding{55}}
+\providecommand{\wmark}{\ding{73}}
+\newcommand{\symSucces}{\textcolor{success}{\cmark}}
+\newcommand{\symEchec}{\textcolor{failure}{\xmark}}
+\newcommand{\symAttention}{\textcolor{warning}{\wmark}}
+
+% ==================== ESPACEMENTS GÉNÉRAUX ====================
+\usepackage{setspace}
+\setstretch{1.12}
+
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\parindent}{0pt}
+\setlength{\abovedisplayskip}{8pt plus 2pt minus 2pt}
+\setlength{\belowdisplayskip}{8pt plus 2pt minus 2pt}
+\setlength{\abovedisplayshortskip}{4pt plus 1pt}
+\setlength{\belowdisplayshortskip}{4pt plus 1pt}
+
+% ==================== TITRES (espaces corrigés) ====================
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{18pt plus 6pt}{8pt plus 3pt}
+\titlespacing*{\subsection}{0pt}{12pt plus 4pt}{6pt plus 2pt}
+\titlespacing*{\subsubsection}{0pt}{10pt plus 4pt}{4pt plus 2pt}
+
+% AJOUTEZ CECI pour forcer le niveau 4 (####) à aller à la ligne :
+\titleformat{\paragraph}[block]
+  {\normalfont\normalsize\bfseries}{}{0pt}{}
+\titlespacing*{\paragraph}{0pt}{10pt plus 4pt}{4pt plus 2pt}
+
+% ==================== TABLE DES MATIÈRES ====================
+\usepackage{tocloft}
+\renewcommand{\cftsecpagefont}{\normalfont}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\setlength{\cftbeforesecskip}{2pt plus 1pt}
+\clubpenalty=10000
+\widowpenalty=10000
+\setlength{\cftsecindent}{0pt}
+\setlength{\cftsubsecindent}{10pt}
+\setlength{\cftsubsubsecindent}{20pt}
+\setcounter{tocdepth}{2}
+
+% ==================== GÉOMÉTRIE ET MISE EN PAGE ====================
+\usepackage{geometry}
+\geometry{
+  margin=2.5cm,
+  headsep=4mm,
+  footskip=12pt
+}
+
+% ==================== TABLEAUX ====================
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{adjustbox}
+\usepackage{placeins}
+\usepackage{booktabs}
+\usepackage{caption}  
+\setlength{\LTpre}{6pt}
+\setlength{\LTpost}{6pt}
+\setlength{\extrarowheight}{2pt}
+
+% ==================== LISTES ====================
+\usepackage{enumitem}
+\setlist{nosep, left=0pt}
+
+% ==================== COULEURS ====================
+\usepackage{xcolor}
+\definecolor{success}{RGB}{0,150,0}
+\definecolor{failure}{RGB}{200,0,0}
+\definecolor{warning}{RGB}{255,140,0}
+\definecolor{codebg}{RGB}{245,245,245}
+
+% ==================== INSERTION DES COMMANDES YAML ====================
+$header-includes$
+
+% ==================== CODE ET LISTINGS ====================
+\usepackage{listings}
+\usepackage{alltt}
+\usepackage{framed}
+\definecolor{shadecolor}{rgb}{0.9,0.9,0.9}
+
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  backgroundcolor=\color{codebg},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  showstringspaces=false,
+  tabsize=4
+}
+
+% ==================== BOÎTES ET ENCADRÉS ====================
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta, calc} 
+\usepackage{tcolorbox}
+\tcbuselibrary{most}
+\newtcolorbox{validationbox}[2][]{
+  colback=green!5!white,
+  colframe=green!75!black,
+  fonttitle=\bfseries,
+  title=#2,
+  #1
+}
+\newtcolorbox{errorbox}[2][]{
+  colback=red!5!white,
+  colframe=red!75!black,
+  fonttitle=\bfseries,
+  title=#2,
+  #1
+}
+\newtcolorbox{warningbox}[2][]{
+  colback=orange!5!white,
+  colframe=orange!75!black,
+  fonttitle=\bfseries,
+  title=#2,
+  #1
+}
+
+% ==================== FIGURES ET IMAGES ====================
+\usepackage{graphicx}
+\setkeys{Gin}{keepaspectratio=true}
+\usepackage{capt-of}
+\usepackage{pdflscape}
+
+\newcommand{\autofigure}[3][]{
+  \begin{figure}[htbp]
+  \centering
+  \adjustbox{max width=\textwidth, max height=0.6\textheight, keepaspectratio, center}{
+    \includegraphics{#2}
+  }
+  \captionof{figure}{#3}
+  \label{fig:#2}
+  \end{figure}
+}
+
+% ==================== EN-TÊTE ET PIED DE PAGE ====================
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\textsc{Tian-Dao Phonology}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyhead[C]{\textsc{Tian-Dao Phonology}}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0.4pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+\fancypagestyle{firstpage}{
+  \fancyhf{}
+  \fancyhead[C]{\textsc{Tian-Dao Phonology}}
+  \fancyfoot[C]{}
+  \renewcommand{\headrulewidth}{0.4pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+% ==================== HYPERLIENS ====================
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue,
+  citecolor=blue
+}
+
+% ==================== PROTECTION LIGNES ORPHELINES ====================
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+
+% ==================== DÉFINITIONS POUR PANDOC ====================
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{2pt}\setlength{\parskip}{6pt}
+}
+\newcommand{\passthrough}[1]{#1}
+
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+
+$if(csl-refs)$
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newenvironment{CSLReferences}[2]%
+{\par
+\noindent\setlength{\parindent}{0pt}}%
+{\par}
+\newcommand{\CSLBlock}[1]{#1\par}
+\newcommand{\CSLLeftMargin}[1]{\hspace*{\cslhangindent}#1}
+\newcommand{\CSLRightInline}[1]{#1}
+\newcommand{\CSLIndent}[1]{\hspace*{\cslhangindent}#1}
+$endif$
+
+% ==================== VARIABLES PANDOC ====================
+\title{$title$}
+\author{$for(author)$$author$$sep$ \\ $endfor$}
+\date{$date$}
+
+% ==================== REDÉFINITION DE \maketitle ====================
+\makeatletter
+\renewcommand{\maketitle}{
+  \begin{center}
+  \vspace*{1cm}
+  
+  \begin{minipage}{\textwidth}
+  \centering
+  \fontsize{20}{26}\selectfont\textbf{$title$}
+  \end{minipage}
+  
+  \vspace{0.4cm}
+  
+  $if(subtitle)$
+  \begin{minipage}{\textwidth}
+  \centering
+  \fontsize{13}{16}\selectfont\itshape $subtitle$
+  \end{minipage}
+  $endif$
+  
+  \vspace{0.6cm}
+  
+  \begin{minipage}{\textwidth}
+  \centering
+  \Large
+  $for(author)$$author$$sep$ \par $endfor$
+  \end{minipage}
+  
+  \vspace{0.6cm}
+  
+  \Large $date$
+  
+  \end{center}
+  \vspace{1cm}
+}
+\makeatother
+
+\usepackage{tabularx}
+
+% ==================== CORPS DU DOCUMENT ====================
+\begin{document}
+\maketitle
+\thispagestyle{firstpage}
+
+$if(abstract)$
+\begin{center}
+\begin{minipage}{0.85\textwidth}
+\noindent \textbf{Abstract:} $abstract$
+\end{minipage}
+\end{center}
+\vspace{1cm}
+$endif$
+
+$if(toc)$
+\tableofcontents
+\clearpage
+$endif$
+
+\pagestyle{fancy}
+
+$body$
+
+\end{document}

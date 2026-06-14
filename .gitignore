@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Dossier Trash (corbeille locale)
+Trash/
+.trash/
+*Trash*/
+
+# Résultats (optionnel : commenter si vous voulez versionner les figures)
+# results/figures_fr/*.png
+# results/figures_en/*.png
+# results/figures_fr/*.csv
+# results/figures_en/*.csv
+
+# Fichiers temporaires du pipeline
+*.tmp
+*.temp
