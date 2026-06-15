@@ -215,7 +215,16 @@ Ces axes définissent les sous-variétés orthogonales d'un espace combinatoire 
 
 Dès 1916, Saussure [@Saussure1916] établissait que tout système linguistique humain est fondamentalement discret : les unités linguistiques n'existent que par leurs oppositions mutuelles, et le continu est une impossibilité catégorielle en linguistique. Cette thèse, formalisée par l'École de Prague [@Jakobson1952; @Trubetzkoy1939] à travers la notion de traits distinctifs, implique que la phonologie mandarine est nécessairement un espace combinatoire discret.
 
-Notre approche ascendante confirme ce principe fondateur. L'analyse par regroupement par densité HDBSCAN et l'étude des cooccurrences font émerger une structure en grille parfaite, isomorphe aux tables de rimes traditionnelles (等韵图). L'espace des possibles se factorise en deux ensembles discrets orthogonaux :
+Notre approche ascendante confirme ce principe fondateur. L'analyse par regroupement par densité HDBSCAN et l'étude des cooccurrences font émerger une structure en grille parfaite, isomorphe aux tables de rimes traditionnelles (等韵图). 
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1.0\textwidth]{../results/figures_fr/fig1_discretion_saussurienne_20260614_091704.png}
+\end{figure}
+
+*Les deux projections MDS 3D montrent respectivement la bipartition nasal/oral (gauche) et l'organisation tonale (droite). Les couleurs franches révèlent la discrétion réelle des classes phonologiques.*
+
+L'espace des possibles se factorise en deux ensembles discrets orthogonaux :
 
 **Les 8 lieux d'articulation (colonnes)** : Labiale, Dentale, Vélaire, Palatale, Rétroflexe, Sifflante, Semi-voyelle, Zero.
 
@@ -273,6 +282,11 @@ Chaque combinaison lieu-rime est associée à une signature de polarité selon s
 | **1P+2N** | 5 794 | 54,9% | 5 801 | 55,0% | -0,1% |
 | **3N** | 183 | 1,7% | 527 | 5,0% | -3,3% |
 | **Total** | **10 547** | **100%** | **10 547** | **100%** | |
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1.0\textwidth]{../results/figures_fr/fig3_gradient_polarite_20260614_091704.png}
+\end{figure}
 
 Le test de corrélation de Spearman entre les rangs observés et théoriques produit une corrélation parfaite : **ρ = 1,000** (p < 10⁻¹⁵). Cependant, le test d'adéquation du χ² révèle un écart significatif (χ² = 262,43, p = 1,34e-56), principalement dû à la sous-représentation de la classe **3N** (1,7% observé vs 5,0% théorique). Cette divergence, loin d'invalider le modèle, reflète l'évolution historique du mandarin standard (voir §5.2).
 
@@ -334,6 +348,11 @@ Le système linguistique mandarin, régi par des principes saussuriens d'opposit
 #### 4.4. Émergence de la grille 5×8 et typologie des 14 lacunes phonotactiques
 
 L'analyse de la matrice de contingence Lieux d'articulation × Groupes de rimes révèle une structure hautement contrainte. Sur les 40 nœuds théoriques de la grille, **26 cases sont actives (65% de remplissage)**, tandis que **14 combinaisons sont systématiquement absentes** du corpus moderne. 
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1.0\textwidth]{../results/figures_fr/fig2_grille_et_lacunes_20260614_091704.png}
+\end{figure}
 
 Ces 14 lacunes matérialisent les seuils de frustration topologique du système. Une analyse phonologique fine permet de les classer en deux catégories distinctes :
 
@@ -427,6 +446,11 @@ L'invariant 64→20 n'est donc pas invalidé par cet écart : il est au contra
 Nous pouvons ainsi prolonger un aphorisme chinois ancré dans la logique morphologicienne propre à cette civilisation: *Les rayures sont au zèbre, ce que le bruissement du vent dans les arbres est à la forêt, ce que la littérature est à l'homme* ce à quoi nous ajoutons: *ce que les codons sont au code génétique, et ce que les initiales sont à la phonologie mandarine* : la signature discrète et fondamentale d'une architecture sous-jacente.
 
 L'analyse ascendante de la phonologie mandarine confirme l'hypothèse d'un invariant topologique universel $64 \rightarrow 20$. En nous appuyant sur le principe saussurien de la discrétion linguistique, nous avons démontré que l'espace phonologique est une grille combinatoire stricte (5×8) dont les lacunes matérialisent les seuils de fermeture topologique. 
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1.0\textwidth]{../results/figures_fr/fig4_synthese_finale_20260614_091704.png}
+\end{figure}
 
 Les résultats empiriques sont sans équivoque :
 

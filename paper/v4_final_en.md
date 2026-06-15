@@ -224,7 +224,14 @@ These axes define the orthogonal subspaces of a discrete combinatorial space.
 
 As early as 1916, Saussure [@Saussure1916] established that every human linguistic system is fundamentally discrete: linguistic units exist only through their mutual oppositions, and the continuum is a categorical impossibility in linguistics. This thesis, formalized by the Prague School [@Jakobson1952; @Trubetzkoy1939] through the notion of distinctive features, implies that Mandarin phonology is necessarily a discrete combinatorial space.
 
-Our bottom-up approach confirms this founding principle. HDBSCAN density-based clustering analysis and the study of co-occurrences reveal a perfect grid structure, isomorphic to traditional rhyme tables (等韵图). The space of possibilities factors into two orthogonal discrete sets:
+Our bottom-up approach confirms this founding principle. HDBSCAN density-based clustering analysis and the study of co-occurrences reveal a perfect grid structure, isomorphic to traditional rhyme tables (等韵图).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1.0\textwidth]{../results/figures_en/fig1_saussurean_discreteness_20260614_172220.png}
+\end{figure}
+
+The space of possibilities factors into two orthogonal discrete sets:
 
 **The 8 places of articulation (columns)**: Labial, Dental, Velar, Palatal, Retroflex, Sibilant, Semivowel, Zero.
 
@@ -290,6 +297,11 @@ Each rhyme-place combination is associated with a polarity signature based on it
 | **3N** | 183 | 1.7% | 527 | 5.0% | -3.3% |
 | **Total** | **10,547** | **100%** | **10,547** | **100%** | |
 
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1.0\textwidth]{../results/figures_en/fig3_polarity_gradient_20260614_172220.png}
+\end{figure}
+
 The Spearman correlation test between the observed and theoretical ranks yields a perfect correlation: **ρ = 1.000** (p < 10⁻¹⁵). However, the χ² goodness-of-fit test reveals a significant deviation (χ² = 262.43, p = 1.34e-56), mainly due to the underrepresentation of the **3N** class (1.7% observed vs. 5.0% theoretical). This divergence, far from invalidating the model, reflects the historical evolution of Standard Mandarin (see §5.2).
 
 #### 4.3.3. The 24 → 20 surjection as topological degeneracy  
@@ -350,6 +362,11 @@ The Mandarin linguistic system, governed by Saussurean principles of opposition 
 ### 4.4. Emergence of the 5×8 grid and typology of the 14 phonotactic gaps
 
 Analysis of the Places of Articulation × Rhyme Groups contingency matrix reveals a highly constrained structure. Of the grid's 40 theoretical nodes, **26 cells are active (65% occupancy)**, while **14 combinations are systematically absent** from the modern corpus.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1.0\textwidth]{../results/figures_en/fig2_grid_and_gaps_20260614_172220.png}
+\end{figure}
 
 These 14 gaps represent the system's thresholds of topological frustration. A detailed phonological analysis allows us to classify them into two distinct categories:
 
@@ -447,6 +464,11 @@ The 64→20 invariant is therefore not invalidated by this discrepancy: on the c
 We can thus extend a Chinese aphorism rooted in the morphological logic specific to this civilization: *Stripes are to the zebra as the rustling of the wind in the trees is to the forest, as literature is to man*—to which we add: *as codons are to the genetic code, and as initials are to Mandarin phonology*: the discrete and fundamental signature of an underlying architecture.
 
 The bottom-up analysis of Mandarin phonology confirms the hypothesis of a universal topological invariant $64 \rightarrow 20$. Drawing on Saussure's principle of linguistic discreteness, we have demonstrated that phonological space is a strict combinatorial grid (5×8) whose gaps materialize the thresholds of topological closure.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1.0\textwidth]{../results/figures_en/fig4_final_synthesis_20260614_172220.png}
+\end{figure}
 
 The empirical results are unequivocal:
 
