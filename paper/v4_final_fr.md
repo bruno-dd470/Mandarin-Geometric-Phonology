@@ -4,24 +4,17 @@ author: "Bruno DE DOMINICIS"
 ORCID: 0009-0009-0380-3056
 date: "Juin 2026"
 lang: fr
+doi: 10.5281/zenodo.20696586
 abstract: |
   Les travaux fondateurs de Rowlands et Hill (2007) ont établi un pont entre la physique des particules et la biologie moléculaire, suggérant qu'une même structure algébrico-géométrique sous-tend ces deux domaines. Reprenant ce cadre, nous avons récemment formalisé l'invariant topologique de réduction  64 → 20 indépendammant du substrat, selon lequel des contraintes géométriques partitionnent nécessairement un espace de 64 configurations en 20 classes d'équivalence stables : *la topologie fixe l'architecture différentielle du système, tandis que les impératifs fonctionnels en déterminent l'occupation concrète*.
 
   La phonologie du mandarin est un système discret régi par les principes d'opposition saussuriens étrangers à la biologie ou à la physique. Le présent article vérifie que le mandarin obéit également à cette structure algébrico-géométrique : L'analyse révèle l'émergence spontanée d'une grille combinatoire 5×8 (Wuxing × Bagua) présentant 26 cases actives sur 40 (65%).
   
    Les 14 lacunes phonotactiques identifiées se répartissent en 4 contraintes structurelles (isomorphes aux zones octaédriques de la Merkabah) et 8 contraintes historiques ou fonctionnelles, validant l'hypothèse d'une projection de l'invariant topologique 64→20. La distribution des polarités de cette grille respecte le gradient de l'invariant $64 \rightarrow 20$ ($\rho = 1,0$). Les lacunes phonotactiques observées matérialisent les seuils de frustration topologique, confirmant que la géométrie borne l'architecture différentielle des systèmes discrets, qu'ils soient physiques, biologiques ou linguistiques.
-
-abstract_en: |
-  The seminal work of Rowlands and Hill (2007) bridged the gap between particle physics and molecular biology, suggesting that a single algebraic-geometric structure underlies both fields. Building on this framework, we have recently formalized the substrate-independent topological reduction invariant 64 → 20, according to which geometric constraints necessarily partition a space of 64 configurations into 20 stable equivalence classes: *topology determines the differential architecture of the system, while functional imperatives determine its concrete configuration*.
-  
-  Mandarin phonology is a discrete system governed by Saussurean principles of opposition that are foreign to biology or physics. This article verifies that Mandarin also obeys this algebraic-geometric structure: The phonology of Mandarin is a discrete system governed by Saussurean principles of opposition that are unrelated to biology or physics. This article verifies that Mandarin also conforms to this algebraic-geometric structure: The analysis reveals the spontaneous emergence of a 5×8 combinatorial grid (Wuxing × Bagua) with 26 active cells out of 40 (65%). 
-  
-  The 14 identified phonotactic gaps are distributed across 4 structural constraints (isomorphic to the octahedral zones of the Merkabah) and 8 historical or functional constraints, validating the hypothesis of a projection of the topological invariant 64→20. The distribution of polarities in this grid follows the gradient of the $64 \rightarrow 20$ invariant ($\rho = 1.0$). The observed phonotactic gaps embody thresholds of topological frustration, confirming that geometry constrains the differential architecture of discrete systems, whether physical, biological, or linguistic.
-
+  **DOI:** [10.5281/zenodo.20696586](https://doi.org/10.5281/zenodo.20696586)
 keywords_fr: ["Phonologie du mandarin", "Ferdinand de Saussure", "Invariant topologique 64→20", "Algèbre de Clifford", "Wuxing", "Bagua", "Traits distinctifs"]
-keywords_en: ["Phonology of Mandarin", "Ferdinand de Saussure", "Topological invariant 64→20", "Clifford algebra", "Wuxing", "Bagua", "Distinctive features"]
 toc: true
-toc-depth: 2
+toc-depth: 3
 geometry: margin=2.5cm
 documentclass: article
 fontsize: 11pt
@@ -35,6 +28,7 @@ header-includes:
   - \titlespacing*{\section}{0pt}{12pt}{6pt}
   - \titlespacing*{\subsection}{0pt}{12pt}{6pt}
   - \titlespacing*{\subsubsection}{0pt}{12pt}{6pt}
+  - \AtBeginDocument{\let\oldtableofcontents\tableofcontents\renewcommand{\tableofcontents}{\newpage\oldtableofcontents}}
 ---
 
 ## 1. Introduction

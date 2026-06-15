@@ -1,8 +1,10 @@
 # Mandarin-Geometric-Phonology
 
-[![DOI](https://img.shields.io/badge/DOI-10.5281/zenodo.xxxxx-blue.svg)](https://doi.org/10.5281/zenodo.xxxxx)
+[![DOI](https://img.shields.io/badge/DOI-10.5281/zenodo.20696586-blue.svg)](https://doi.org/10.5281/zenodo.20696586)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+
+
 
 ## Mandarin Chinese Phonology as a 64→20 Topological Invariant: Empirical Validation of a Discrete Wuxing × Bagua Grid
 
@@ -84,7 +86,7 @@ python scripts/pipeline_phonologie_chinoise.py
   title     = {Mandarin Chinese Phonology as a 64→20 Topological Invariant},
   journal   = {Forthcoming},
   year      = {2026},
-  doi       = {10.5281/zenodo.xxxxx}
+  doi       = {10.5281/zenodo.20696586}
 }
 ```
 
@@ -180,7 +182,7 @@ python scripts/pipeline_phonologie_chinoise.py
   title     = {Mandarin Chinese Phonology as a 64→20 Topological Invariant},
   journal   = {Forthcoming},
   year      = {2026},
-  doi       = {10.5281/zenodo.xxxxx}
+  doi       = {10.5281/zenodo.20696586}
 }
 ```
 

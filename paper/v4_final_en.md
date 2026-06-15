@@ -4,9 +4,14 @@ author: "Bruno DE DOMINICIS"
 ORCID: 0009-0009-0380-3056
 date: "June 2026"
 lang: en
+doi: 10.5281/zenodo.20696586
 abstract: |
-  The seminal work of Rowlands and Hill (2007) bridged particle physics and molecular biology, suggesting that a single algebraic-geometric structure underlies both fields. Building on this framework, we have recently formalized the substrate-independent topological reduction invariant 64→20. This article verifies that Mandarin phonology also obeys this structure: the analysis reveals the spontaneous emergence of a 5×8 combinatorial grid (Wuxing × Bagua) with 26 active cells out of 40 (65%) and 14 phonotactic gaps. The distribution of polarities follows the gradient of the invariant (Spearman ρ = 1.0000).
-
+  The seminal work of Rowlands and Hill (2007) bridged the gap between particle physics and molecular biology, suggesting that a single algebraic-geometric structure underlies both fields. Building on this framework, we have recently formalized the substrate-independent topological reduction invariant 64 → 20, according to which geometric constraints necessarily partition a space of 64 configurations into 20 stable equivalence classes: *topology determines the differential architecture of the system, while functional imperatives determine its concrete configuration*.
+  
+  Mandarin phonology is a discrete system governed by Saussurean principles of opposition that are foreign to biology or physics. This article verifies that Mandarin also obeys this algebraic-geometric structure: The phonology of Mandarin is a discrete system governed by Saussurean principles of opposition that are unrelated to biology or physics. This article verifies that Mandarin also conforms to this algebraic-geometric structure: The analysis reveals the spontaneous emergence of a 5×8 combinatorial grid (Wuxing × Bagua) with 26 active cells out of 40 (65%). 
+  
+  The 14 identified phonotactic gaps are distributed across 4 structural constraints (isomorphic to the octahedral zones of the Merkabah) and 8 historical or functional constraints, validating the hypothesis of a projection of the topological invariant 64→20. The distribution of polarities in this grid follows the gradient of the $64 \rightarrow 20$ invariant ($\rho = 1.0$). The observed phonotactic gaps embody thresholds of topological frustration, confirming that geometry constrains the differential architecture of discrete systems, whether physical, biological, or linguistic.
+  **DOI:** [10.5281/zenodo.20696586](https://doi.org/10.5281/zenodo.20696586)
 keywords: ["Mandarin Phonology", "Ferdinand de Saussure", "Topological invariant 64→20", "Clifford algebra", "Wuxing", "Bagua", "Distinctive features"]
 toc: true
 toc-depth: 2
@@ -23,6 +28,7 @@ header-includes:
   - \titlespacing*{\section}{0pt}{12pt}{6pt}
   - \titlespacing*{\subsection}{0pt}{12pt}{6pt}
   - \titlespacing*{\subsubsection}{0pt}{12pt}{6pt}
+  - \AtBeginDocument{\let\oldtableofcontents\tableofcontents\renewcommand{\tableofcontents}{\newpage\oldtableofcontents}}
 ---
 
 ## 1. Introduction
